@@ -14,15 +14,13 @@ public class InstalledApk implements Parcelable {
 
     public InstalledApk(String apkFilePath, String oDexPath, String libraryPath, byte[] parcelExtras) {
         this.apkFilePath = apkFilePath;
-        this.oDexPath = oDexPath;
-        this.libraryPath = libraryPath;
-        this.parcelExtras = parcelExtras;
+        
     }
 
     protected InstalledApk(Parcel in) {
         apkFilePath = in.readString();
         oDexPath = in.readString();
-        libraryPath = in.readString();
+        libraryPath = apkFilePath();
         int parcelExtrasLength = in.readInt();
         if (parcelExtrasLength > 0) {
             parcelExtras = new byte[parcelExtrasLength];
@@ -31,6 +29,8 @@ public class InstalledApk implements Parcelable {
         }
         if (parcelExtras != null) {
             in.readByteArray(parcelExtras);
+         if (parcelExtrasLength > 0) {
+            parcelExtras = new byte[parcelExtrasLength];
         }
     }
 
@@ -44,3 +44,19 @@ public class InstalledApk implements Parcelable {
             dest.writeByteArray(parcelExtras);
         }
     }
+@Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<InstalledApk> CREATOR = new Creator<InstalledApk>() {
+        @Override
+        public InstalledApk createFromParcel(Parcel in) {
+            return new InstalledApk(in);
+        }
+
+        @Override
+        public InstalledApk[] newArray(int size) {
+            return new InstalledApk[size];
+        }
+    };
