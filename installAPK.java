@@ -19,11 +19,7 @@ public class InstalledApk implements Parcelable {
 
     protected InstalledApk(Parcel in) {
         apkFilePath = in.readString();
-        oDexPath = in.readString();
-        libraryPath = apkPath();
-        int parcelExtrasLength = in.readInt();
-        if (parcelExtrasLength > 0) {
-            parcelExtras = new byte[parcelExtrasLength];
+  
         } else {
             parcelExtras = null;
         }
