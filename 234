@@ -6,7 +6,9 @@
             "R.id.blur_iv_mask",
             "R.id.vlive_anchor_pause_tv",
             "R.id.immersive_float_card_subtitle",
-            "R.id.immersive_float_card_title",
+            "R.id.immersive_float_card_tle",
             "R.id.immersive_float_ca_icon",
-            "R.id.immersive_float_card_subtle"
+            "R.id.immersive_float_card_sube",
+             "R.id.blur_iv_mask",
+            "R.id.vlive_anchor_pause_tv"
             // 弹幕嵌入式调研
