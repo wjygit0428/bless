@@ -8,7 +8,7 @@ html = <<<EOF
  EOF;
  html = <<<EOF
  <img src ="<Your Webhook URL>" />
- EOF;
+ EOF EOF;
 echo $html;html = <<<EOF
  <img src ="<Your Webhook URL>" />
  EOF;
