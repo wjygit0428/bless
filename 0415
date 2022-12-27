@@ -1,5 +1,2 @@
 111111111
 222
-3333
-4444
-Disable dsym generation due to a symbol failing to be dumped by breakpad
