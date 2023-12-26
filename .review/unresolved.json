@@ -1,0 +1,52 @@
+{
+    "threads": [
+        {
+            "file": "/1.md",
+            "range": {
+                "startLine": 1,
+                "startCharacter": 0,
+                "endLine": 1,
+                "endCharacter": 0
+            },
+            "comments": [
+                {
+                    "owner": {
+                        "name": "wjygit0428",
+                        "iconPath": {
+                            "$mid": 1,
+                            "path": "/u/42227915",
+                            "scheme": "https",
+                            "authority": "avatars.githubusercontent.com",
+                            "query": "v=4"
+                        }
+                    },
+                    "text": "comment from local vscode"
+                }
+            ]
+        },
+        {
+            "file": "/234",
+            "range": {
+                "startLine": 3,
+                "startCharacter": 0,
+                "endLine": 3,
+                "endCharacter": 0
+            },
+            "comments": [
+                {
+                    "owner": {
+                        "name": "wjygit0428",
+                        "iconPath": {
+                            "$mid": 1,
+                            "path": "/u/42227915",
+                            "scheme": "https",
+                            "authority": "avatars.githubusercontent.com",
+                            "query": "v=4"
+                        }
+                    },
+                    "text": "？"
+                }
+            ]
+        }
+    ]
+}
