@@ -1,0 +1,8 @@
+{
+  "name": "bless-gomoku",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:gomoku": "node gomoku/game.test.js"
+  }
+}
