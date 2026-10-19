@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="双人浏览器五子棋小游戏，支持悔棋、重做和对局记录。" />
+  <title>落子之间 · 五子棋</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div class="eyebrow"><span class="dot"></span> LOCAL BOARD GAME · 01</div>
+      <h1>落子之间</h1>
+      <p>一盘专注、克制的五子棋。黑先，连成五子即可获胜。</p>
+    </header>
+
+    <section class="game-layout" aria-label="五子棋游戏">
+      <div class="board-wrap">
+        <div class="board-header"><span>15 × 15 BOARD</span><span id="move-count">00 MOVES</span></div>
+        <div id="board" class="board" role="grid" aria-label="五子棋棋盘"></div>
+        <div class="board-footer"><span class="legend-dot black"></span> 黑方先手 <span class="footer-divider">/</span> 点击交叉点落子</div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="turn-card" id="turn-card">
+          <div class="card-label">CURRENT TURN</div>
+          <div class="turn-display"><span id="turn-stone" class="stone black"></span><strong id="turn-text">黑方</strong></div>
+          <div id="status-text" class="status-text">轮到黑方落子</div>
+        </div>
+
+        <div class="controls">
+          <button id="undo" class="button button-primary" type="button"><span>↶</span> 悔棋 <kbd>U</kbd></button>
+          <button id="redo" class="button button-secondary" type="button"><span>↷</span> 重做 <kbd>R</kbd></button>
+          <button id="restart" class="button button-ghost" type="button">重新开始 <kbd>N</kbd></button>
+        </div>
+
+        <div class="history-card">
+          <div class="card-label">MOVE LOG <span id="history-count">0</span></div>
+          <ol id="history-list" class="history-list"><li class="empty-history">还没有落子记录</li></ol>
+        </div>
+        <p class="tip">TIP · 悔棋会回到上一步的玩家，重做可恢复刚刚撤销的落子。</p>
+      </aside>
+    </section>
+
+    <footer class="page-footer">两位玩家 · 同一台设备 · 无需登录</footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
