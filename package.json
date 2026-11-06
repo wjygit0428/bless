@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test:gomoku": "node gomoku/game.test.js"
+    "test:gomoku": "node gomoku/game.test.js",
+    "test:tank": "node tank/game.test.js"
   }
 }
